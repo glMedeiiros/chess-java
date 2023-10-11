@@ -5,6 +5,8 @@ import boardgame.Position;
 import chess.pieces.King;
 import chess.pieces.Rook;
 
+
+//Classe que inicia a partida de Xadrez
 public class ChessMatch {
 
     private Board board;

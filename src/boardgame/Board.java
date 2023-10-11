@@ -1,19 +1,21 @@
 package boardgame;
 
+//Classe do tabuleiro de Xadrez
 public class Board {
 
+    //São necessários linhas e colunas para construir o tabuleiro e um CONJUNTO de pecas;
     private Integer rows;
     private Integer columns;
     private Piece[][] pieces;
 
     public Board(Integer rows, Integer columns) {
-
+        //Controle de exception no ato da instanciacão
         if(rows < 8 || columns < 8) {
             throw new BoardException("Error creating board: there must be at least 8 rows and 8 columns");
         }
-
         this.rows = rows;
         this.columns = columns;
+        //Instancia a matriz para receber as posicoes das pecas
         pieces = new Piece[rows][columns];
     }
 
